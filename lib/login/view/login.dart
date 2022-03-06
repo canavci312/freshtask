@@ -5,6 +5,8 @@ import 'package:freshflow/login/repository/auth_repository.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:freshflow/shopping_card_list/view/shopping_card_list_screen.dart';
 
+import '../../analytics/analytics.dart';
+
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
@@ -118,6 +120,9 @@ class _LoginViewState extends State<LoginView> {
                       listener: (context, state) {
                         state.maybeWhen(
                             success: (() {
+                              AnalyticsService.logScreens("logged in");
+                              AnalyticsService.logScreens("page view");
+
                               Navigator.of(context)
                                   .push(MaterialPageRoute(builder: ((context) {
                                 return const ShoppingCardListScreen();

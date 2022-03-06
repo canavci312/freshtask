@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:freshflow/analytics/analytics.dart';
 import 'package:freshflow/shopping_card_detail/view/card_item_detail_screen.dart';
 import 'package:freshflow/shopping_card_list/cubit/shopping_card_list_cubit.dart';
 import 'package:freshflow/shopping_card_list/data/sc_list_firestore_impl.dart';
@@ -39,6 +40,8 @@ class ShoppingCardListView extends StatelessWidget {
                       itemBuilder: ((context, index) {
                         return ListTile(
                           onTap: (() {
+                            AnalyticsService.logScreens("item view");
+
                             Navigator.of(context)
                                 .push(MaterialPageRoute(builder: ((context) {
                               return CardItemDetailScreen(list[index]);
