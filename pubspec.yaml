@@ -24,11 +24,11 @@ dependencies:
   json_annotation: ^4.4.0
 
 dev_dependencies:
-  hive_generator: ^1.1.2
   build_runner: ^2.1.7
   flutter_lints: ^1.0.0
   flutter_test:
     sdk: flutter
+  hive_generator: ^1.1.2
   json_serializable: ^6.1.4
 
 flutter:
