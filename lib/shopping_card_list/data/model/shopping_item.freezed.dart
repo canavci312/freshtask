@@ -23,9 +23,9 @@ class _$ShoppingCardItemTearOff {
   const _$ShoppingCardItemTearOff();
 
   _ShoppingCardItem call(
-      {@JsonKey(name: 'name') String? name,
-      @JsonKey(name: 'price') double? price,
-      @JsonKey(name: 'url') String? url}) {
+      {@HiveField(0) String? name,
+      @HiveField(1) double? price,
+      @HiveField(2) String? url}) {
     return _ShoppingCardItem(
       name: name,
       price: price,
@@ -43,11 +43,11 @@ const $ShoppingCardItem = _$ShoppingCardItemTearOff();
 
 /// @nodoc
 mixin _$ShoppingCardItem {
-  @JsonKey(name: 'name')
+  @HiveField(0)
   String? get name => throw _privateConstructorUsedError;
-  @JsonKey(name: 'price')
+  @HiveField(1)
   double? get price => throw _privateConstructorUsedError;
-  @JsonKey(name: 'url')
+  @HiveField(2)
   String? get url => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -62,9 +62,9 @@ abstract class $ShoppingCardItemCopyWith<$Res> {
           ShoppingCardItem value, $Res Function(ShoppingCardItem) then) =
       _$ShoppingCardItemCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'name') String? name,
-      @JsonKey(name: 'price') double? price,
-      @JsonKey(name: 'url') String? url});
+      {@HiveField(0) String? name,
+      @HiveField(1) double? price,
+      @HiveField(2) String? url});
 }
 
 /// @nodoc
@@ -107,9 +107,9 @@ abstract class _$ShoppingCardItemCopyWith<$Res>
       __$ShoppingCardItemCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'name') String? name,
-      @JsonKey(name: 'price') double? price,
-      @JsonKey(name: 'url') String? url});
+      {@HiveField(0) String? name,
+      @HiveField(1) double? price,
+      @HiveField(2) String? url});
 }
 
 /// @nodoc
@@ -150,21 +150,21 @@ class __$ShoppingCardItemCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ShoppingCardItem implements _ShoppingCardItem {
   const _$_ShoppingCardItem(
-      {@JsonKey(name: 'name') this.name,
-      @JsonKey(name: 'price') this.price,
-      @JsonKey(name: 'url') this.url});
+      {@HiveField(0) this.name,
+      @HiveField(1) this.price,
+      @HiveField(2) this.url});
 
   factory _$_ShoppingCardItem.fromJson(Map<String, dynamic> json) =>
       _$$_ShoppingCardItemFromJson(json);
 
   @override
-  @JsonKey(name: 'name')
+  @HiveField(0)
   final String? name;
   @override
-  @JsonKey(name: 'price')
+  @HiveField(1)
   final double? price;
   @override
-  @JsonKey(name: 'url')
+  @HiveField(2)
   final String? url;
 
   @override
@@ -202,21 +202,21 @@ class _$_ShoppingCardItem implements _ShoppingCardItem {
 
 abstract class _ShoppingCardItem implements ShoppingCardItem {
   const factory _ShoppingCardItem(
-      {@JsonKey(name: 'name') String? name,
-      @JsonKey(name: 'price') double? price,
-      @JsonKey(name: 'url') String? url}) = _$_ShoppingCardItem;
+      {@HiveField(0) String? name,
+      @HiveField(1) double? price,
+      @HiveField(2) String? url}) = _$_ShoppingCardItem;
 
   factory _ShoppingCardItem.fromJson(Map<String, dynamic> json) =
       _$_ShoppingCardItem.fromJson;
 
   @override
-  @JsonKey(name: 'name')
+  @HiveField(0)
   String? get name;
   @override
-  @JsonKey(name: 'price')
+  @HiveField(1)
   double? get price;
   @override
-  @JsonKey(name: 'url')
+  @HiveField(2)
   String? get url;
   @override
   @JsonKey(ignore: true)

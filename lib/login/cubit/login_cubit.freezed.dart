@@ -22,9 +22,9 @@ class _$LoginStateTearOff {
     return const _LoginInitial();
   }
 
-  _LoginError error(String messsage) {
+  _LoginError error(String message) {
     return _LoginError(
-      messsage,
+      message,
     );
   }
 
@@ -45,7 +45,7 @@ mixin _$LoginState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(String messsage) error,
+    required TResult Function(String message) error,
     required TResult Function() loading,
     required TResult Function() success,
   }) =>
@@ -53,7 +53,7 @@ mixin _$LoginState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(String messsage)? error,
+    TResult Function(String message)? error,
     TResult Function()? loading,
     TResult Function()? success,
   }) =>
@@ -61,7 +61,7 @@ mixin _$LoginState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(String messsage)? error,
+    TResult Function(String message)? error,
     TResult Function()? loading,
     TResult Function()? success,
     required TResult orElse(),
@@ -151,7 +151,7 @@ class _$_LoginInitial implements _LoginInitial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(String messsage) error,
+    required TResult Function(String message) error,
     required TResult Function() loading,
     required TResult Function() success,
   }) {
@@ -162,7 +162,7 @@ class _$_LoginInitial implements _LoginInitial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(String messsage)? error,
+    TResult Function(String message)? error,
     TResult Function()? loading,
     TResult Function()? success,
   }) {
@@ -173,7 +173,7 @@ class _$_LoginInitial implements _LoginInitial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(String messsage)? error,
+    TResult Function(String message)? error,
     TResult Function()? loading,
     TResult Function()? success,
     required TResult orElse(),
@@ -231,7 +231,7 @@ abstract class _$LoginErrorCopyWith<$Res> {
   factory _$LoginErrorCopyWith(
           _LoginError value, $Res Function(_LoginError) then) =
       __$LoginErrorCopyWithImpl<$Res>;
-  $Res call({String messsage});
+  $Res call({String message});
 }
 
 /// @nodoc
@@ -246,12 +246,12 @@ class __$LoginErrorCopyWithImpl<$Res> extends _$LoginStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? messsage = freezed,
+    Object? message = freezed,
   }) {
     return _then(_LoginError(
-      messsage == freezed
-          ? _value.messsage
-          : messsage // ignore: cast_nullable_to_non_nullable
+      message == freezed
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -260,14 +260,14 @@ class __$LoginErrorCopyWithImpl<$Res> extends _$LoginStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_LoginError implements _LoginError {
-  const _$_LoginError(this.messsage);
+  const _$_LoginError(this.message);
 
   @override
-  final String messsage;
+  final String message;
 
   @override
   String toString() {
-    return 'LoginState.error(messsage: $messsage)';
+    return 'LoginState.error(message: $message)';
   }
 
   @override
@@ -275,12 +275,12 @@ class _$_LoginError implements _LoginError {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _LoginError &&
-            const DeepCollectionEquality().equals(other.messsage, messsage));
+            const DeepCollectionEquality().equals(other.message, message));
   }
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(messsage));
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
 
   @JsonKey(ignore: true)
   @override
@@ -291,35 +291,35 @@ class _$_LoginError implements _LoginError {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(String messsage) error,
+    required TResult Function(String message) error,
     required TResult Function() loading,
     required TResult Function() success,
   }) {
-    return error(messsage);
+    return error(message);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(String messsage)? error,
+    TResult Function(String message)? error,
     TResult Function()? loading,
     TResult Function()? success,
   }) {
-    return error?.call(messsage);
+    return error?.call(message);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(String messsage)? error,
+    TResult Function(String message)? error,
     TResult Function()? loading,
     TResult Function()? success,
     required TResult orElse(),
   }) {
     if (error != null) {
-      return error(messsage);
+      return error(message);
     }
     return orElse();
   }
@@ -363,9 +363,9 @@ class _$_LoginError implements _LoginError {
 }
 
 abstract class _LoginError implements LoginState {
-  const factory _LoginError(String messsage) = _$_LoginError;
+  const factory _LoginError(String message) = _$_LoginError;
 
-  String get messsage;
+  String get message;
   @JsonKey(ignore: true)
   _$LoginErrorCopyWith<_LoginError> get copyWith =>
       throw _privateConstructorUsedError;
@@ -412,7 +412,7 @@ class _$_LoginLoading implements _LoginLoading {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(String messsage) error,
+    required TResult Function(String message) error,
     required TResult Function() loading,
     required TResult Function() success,
   }) {
@@ -423,7 +423,7 @@ class _$_LoginLoading implements _LoginLoading {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(String messsage)? error,
+    TResult Function(String message)? error,
     TResult Function()? loading,
     TResult Function()? success,
   }) {
@@ -434,7 +434,7 @@ class _$_LoginLoading implements _LoginLoading {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(String messsage)? error,
+    TResult Function(String message)? error,
     TResult Function()? loading,
     TResult Function()? success,
     required TResult orElse(),
@@ -527,7 +527,7 @@ class _$_LoginDone implements _LoginDone {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(String messsage) error,
+    required TResult Function(String message) error,
     required TResult Function() loading,
     required TResult Function() success,
   }) {
@@ -538,7 +538,7 @@ class _$_LoginDone implements _LoginDone {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(String messsage)? error,
+    TResult Function(String message)? error,
     TResult Function()? loading,
     TResult Function()? success,
   }) {
@@ -549,7 +549,7 @@ class _$_LoginDone implements _LoginDone {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(String messsage)? error,
+    TResult Function(String message)? error,
     TResult Function()? loading,
     TResult Function()? success,
     required TResult orElse(),
